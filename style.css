@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(0deg, rgb(75, 75, 75), rgb(144, 144, 144),rgb(184, 184, 184));
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.wrapper h1 {
+    margin: 20px auto;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+}
+
+.card {
+    width: 32%;
+    overflow: hidden;
+    height: 30vmin;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+    /* filter: blur(2px); */
+    filter: grayscale(100%);
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 50px #ffffff);
+}
+
+.card:hover img {
+    /* filter: blur(0px); */
+    filter: grayscale(0%);
+}
+
+.card figcaption {
+    position: absolute;
+    bottom: 0;
+    width: fit-content;
+    height: 20%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
+    color: rgb(255, 255, 255);
+    padding: 25px;
+    opacity: 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.card:hover figcaption {
+    opacity: 1;
+    bottom: 40%;
+    transition: 1s;
+}
